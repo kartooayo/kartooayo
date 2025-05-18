@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body, .App {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  background: #191970;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+.MuiTypography-root {
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: 1rem;
+}
+
+.MuiButton-root,
+.MuiInputBase-input,
+.MuiInputLabel-root {
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: 1rem;
+}
+
+/* Slightly round input field borders */
+.MuiOutlinedInput-root {
+  border-radius: 8px !important;
+}
+
+/* Input hover/focus states */
+.MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+  border-color: #FFD700 !important;
+}
+.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: #FFD700 !important;
+  box-shadow: 0 0 0 2px rgba(255, 215, 0, 0.15);
+}
+
+/* Show/Hide password icon color */
+.MuiInputAdornment-root .MuiIconButton-root {
+  color: #FFD700 !important;
+  transition: color 0.2s;
+}
+.MuiInputAdornment-root .MuiIconButton-root:hover,
+.MuiInputAdornment-root .MuiIconButton-root:focus {
+  color: #e6c200 !important;
+}
+
+/* Button hover/focus states */
+.MuiButton-root {
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+.MuiButton-root:hover,
+.MuiButton-root:focus {
+  background-color: #e6c200 !important;
+  color: #191970 !important;
+  box-shadow: 0 2px 8px rgba(255, 215, 0, 0.15);
+}
+
+/* Fade-in animation for login card */
+.fade-in {
+  animation: fadeIn 1s ease;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+/* Forgot password link: spacing, smaller, lighter */
+.forgot-password-link {
+  margin-top: 20px;
+  display: inline-block;
+  font-size: 0.85rem;
+  color: #FFD70099; /* lighter gold */
+  text-decoration: underline;
+  font-weight: 400;
+  opacity: 0.7;
+  transition: opacity 0.2s, color 0.2s;
+}
+.forgot-password-link:hover,
+.forgot-password-link:focus {
+  opacity: 1;
+  color: #FFD700;
+}
+
+/* Sign-up link styling */
+.sign-up-link {
+  font-size: 0.95rem;
+  color: #FFD700cc;
+  text-decoration: underline;
+  font-weight: 500;
+  opacity: 0.8;
+  transition: opacity 0.2s, color 0.2s;
+}
+.sign-up-link:hover,
+.sign-up-link:focus {
+  opacity: 1;
+  color: #FFD700;
+}
+
+@media (max-width: 600px) {
+  body, .App, .MuiTypography-root, .MuiButton-root, .MuiInputBase-input, .MuiInputLabel-root {
+    font-size: 14px;
+  }
+}
